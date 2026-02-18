@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Study Planner | Map</title>
+    <meta name="description" content="Find nearby study locations using an interactive map." />
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark" aria-hidden="true">@</span>
+            <span class="brand-name">Student Study Planner</span>
+        </div>
+
+        <nav class="site-nav" aria-label="Primary">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="quote-library.html">Quotes</a>
+            <button class="nav-link as-button" id="logoutBtn" type="button">Logout</button>
+        </nav>
+    </header>
+
+    <main id="main" class="container">
+        <section class="card">
+            <h1 class="page-title">Nearby Study Locations</h1>
+
+            <div class="map-controls">
+                <button id="useMyLocationBtn" class="btn btn-primary" type="button">Use My Location</button>
+
+                <select id="placeType" class="select" aria-label="Location type">
+                    <option value="library">Libraries</option>
+                    <option value="cafe">Cafés</option>
+                    <option value="university">Universities</option>
+                </select>
+
+                <button id="searchBtn" class="btn btn-outline" type="button">Search Nearby</button>
+            </div>
+
+            <p id="mapMsg" class="helper-text" role="status" aria-live="polite"></p>
+
+            <div id="map" class="map" role="application" aria-label="Map showing study spots"></div>
+        </section>
+    </main>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script type="module" src="js/map.js"></script>
+</body>
+
+</html>

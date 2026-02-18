@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Study Planner | Dashboard</title>
+    <meta name="description" content="Stay motivated, track study time, and find nearby study spots." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark" aria-hidden="true">@</span>
+            <span class="brand-name">Student Study Planner</span>
+        </div>
+
+        <nav class="site-nav" aria-label="Primary">
+            <a class="nav-link" href="index.html" aria-current="page">Home</a>
+            <a class="nav-link" href="profile.html">Profile</a>
+            <button class="nav-link as-button" id="logoutBtn" type="button">Logout</button>
+        </nav>
+    </header>
+
+    <main id="main" class="container">
+        <!-- Quote hero -->
+        <section class="hero card fade-in" aria-labelledby="quoteTitle">
+            <h2 id="quoteTitle" class="section-title">“Quote”</h2>
+
+            <p id="quoteText" class="quote-text" aria-live="polite">Loading quote…</p>
+            <p id="quoteAuthor" class="quote-author"></p>
+
+            <button id="saveQuoteBtn" class="btn btn-primary" type="button">Save Quote</button>
+            <p id="quoteMsg" class="helper-text" role="status" aria-live="polite"></p>
+        </section>
+
+        <!-- Study tracker -->
+        <section class="card" aria-labelledby="trackerTitle">
+            <h2 id="trackerTitle" class="section-title">Study Tracker</h2>
+
+            <p class="tracker-line">
+                <strong>Today’s Study Hours:</strong>
+                <span id="todayHours">0</span> hrs
+            </p>
+
+            <button id="startSessionBtn" class="btn btn-outline" type="button">Start Study Session</button>
+            <p class="helper-text">Tip: Click “Start Study Session” and enter how long you studied.</p>
+        </section>
+
+        <!-- Bottom nav cards -->
+        <section class="quick-links" aria-label="Quick links">
+            <a class="quick-card" href="map.html">
+                <div class="quick-icon" aria-hidden="true"></div>
+                <div class="quick-title">Map</div>
+                <div class="quick-sub">Find Study Spots</div>
+            </a>
+
+            <a class="quick-card" href="quote-library.html">
+                <div class="quick-icon" aria-hidden="true"></div>
+                <div class="quick-title">Quotes</div>
+                <div class="quick-sub">Saved Quotes</div>
+            </a>
+
+            <a class="quick-card" href="profile.html">
+                <div class="quick-icon" aria-hidden="true"></div>
+                <div class="quick-title">Profile</div>
+                <div class="quick-sub">View Profile</div>
+            </a>
+        </section>
+    </main>
+
+    <script type="module" src="js/dashboard.js"></script>
+</body>
+
+</html>

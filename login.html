@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Study Planner | Login</title>
+    <meta name="description" content="Register or log in to Student Study Planner." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <main id="main" class="container">
+        <section class="card auth-card">
+            <h1 class="page-title">Welcome</h1>
+            <p class="helper-text">Register an account or log in to continue.</p>
+
+            <div class="auth-grid">
+                <!-- Register -->
+                <form id="registerForm" class="auth-form" novalidate>
+                    <h2 class="section-title">Register</h2>
+
+                    <label class="label" for="regUsername">Username</label>
+                    <input class="input" id="regUsername" name="regUsername" autocomplete="username" required
+                        minlength="3" />
+
+                    <label class="label" for="regPassword">Password</label>
+                    <input class="input" id="regPassword" name="regPassword" type="password" autocomplete="new-password"
+                        required minlength="6" />
+
+                    <button class="btn btn-primary" type="submit">Create Account</button>
+                    <p id="registerMsg" class="helper-text" role="status" aria-live="polite"></p>
+                </form>
+
+                <!-- Login -->
+                <form id="loginForm" class="auth-form" novalidate>
+                    <h2 class="section-title">Login</h2>
+
+                    <label class="label" for="loginUsername">Username</label>
+                    <input class="input" id="loginUsername" name="loginUsername" autocomplete="username" required />
+
+                    <label class="label" for="loginPassword">Password</label>
+                    <input class="input" id="loginPassword" name="loginPassword" type="password"
+                        autocomplete="current-password" required />
+
+                    <button class="btn btn-outline" type="submit">Login</button>
+                    <p id="loginMsg" class="helper-text" role="status" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/auth.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Student Study Planner | Profile</title>
+    <meta name="description" content="View your account stats and study progress." />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+        <div class="brand">
+            <span class="brand-mark" aria-hidden="true">@</span>
+            <span class="brand-name">Student Study Planner</span>
+        </div>
+
+        <nav class="site-nav" aria-label="Primary">
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="quote-library.html">Quotes</a>
+            <button class="nav-link as-button" id="logoutBtn" type="button">Logout</button>
+        </nav>
+    </header>
+
+    <main id="main" class="container">
+        <section class="card">
+            <h1 class="page-title">Profile</h1>
+
+            <div class="profile-grid">
+                <div class="profile-box">
+                    <div class="profile-label">Username</div>
+                    <div id="profileUsername" class="profile-value">—</div>
+                </div>
+
+                <div class="profile-box">
+                    <div class="profile-label">Saved Quotes</div>
+                    <div id="profileQuotes" class="profile-value">0</div>
+                </div>
+
+                <div class="profile-box">
+                    <div class="profile-label">Total Study Hours</div>
+                    <div id="profileHours" class="profile-value">0</div>
+                </div>
+            </div>
+
+            <p class="helper-text">Stats are stored per account in this browser.</p>
+        </section>
+    </main>
+
+    <script type="module" src="js/profile.js"></script>
+</body>
+
+</html>
