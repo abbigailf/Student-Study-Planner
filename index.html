@@ -26,14 +26,20 @@
     </header>
 
     <main id="main" class="container">
+
         <!-- Quote hero -->
         <section class="hero card fade-in" aria-labelledby="quoteTitle">
-            <h2 id="quoteTitle" class="section-title">“Quote”</h2>
+            <h2 id="quoteTitle" class="section-title">Daily Motivation</h2>
 
-            <p id="quoteText" class="quote-text" aria-live="polite">Loading quote…</p>
+            <p id="quoteText" class="quote-text" aria-live="polite">
+                Loading quote…
+            </p>
             <p id="quoteAuthor" class="quote-author"></p>
 
-            <button id="saveQuoteBtn" class="btn btn-primary" type="button">Save Quote</button>
+            <button id="saveQuoteBtn" class="btn btn-primary" type="button">
+                Save Quote
+            </button>
+
             <p id="quoteMsg" class="helper-text" role="status" aria-live="polite"></p>
         </section>
 
@@ -46,29 +52,55 @@
                 <span id="todayHours">0</span> hrs
             </p>
 
-            <button id="startSessionBtn" class="btn btn-outline" type="button">Start Study Session</button>
-            <p class="helper-text">Tip: Click “Start Study Session” and enter how long you studied.</p>
+            <button id="startSessionBtn" class="btn btn-outline" type="button">
+                Start Study Session
+            </button>
+
+            <p class="helper-text">
+                Tip: Click “Start Study Session” and enter how long you studied.
+            </p>
         </section>
 
-        <!-- Bottom nav cards -->
+        <!-- Quick navigation cards -->
         <section class="quick-links" aria-label="Quick links">
+
+            <!-- Map -->
             <a class="quick-card" href="map.html">
-                <div class="quick-icon" aria-hidden="true"></div>
+                <div class="quick-icon map-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linejoin="round" />
+                        <path d="M9 3v15M15 6v15" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
                 <div class="quick-title">Map</div>
                 <div class="quick-sub">Find Study Spots</div>
             </a>
 
+            <!-- Quotes -->
             <a class="quick-card" href="quote-library.html">
-                <div class="quick-icon" aria-hidden="true"></div>
+                <div class="quick-icon quotes-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <path d="M7 17h4V9H5v6a2 2 0 002 2z
+                     M15 17h4V9h-6v6a2 2 0 002 2z" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
                 <div class="quick-title">Quotes</div>
                 <div class="quick-sub">Saved Quotes</div>
             </a>
 
+            <!-- Profile -->
             <a class="quick-card" href="profile.html">
-                <div class="quick-icon" aria-hidden="true"></div>
+                <div class="quick-icon profile-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="32" height="32">
+                        <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2" />
+                        <path d="M4 20c0-4 4-6 8-6s8 2 8 6" fill="none" stroke="currentColor" stroke-width="2" />
+                    </svg>
+                </div>
                 <div class="quick-title">Profile</div>
                 <div class="quick-sub">View Profile</div>
             </a>
+
         </section>
     </main>
 

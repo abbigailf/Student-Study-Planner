@@ -137,9 +137,7 @@ body {
     place-items: center;
     text-align: center;
     background:
-        radial-gradient(circle at top,
-            var(--blue-100),
-            #ffffff 60%);
+        radial-gradient(circle at top, var(--blue-100), #ffffff 60%);
 }
 
 .section-title {
@@ -245,11 +243,34 @@ body {
     transform: translateY(-2px);
 }
 
+/* ICON STYLES (IMPORTANT) */
 .quick-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 12px;
+    width: 72px;
+    height: 72px;
+    border-radius: 18px;
+    background: #f9fafb;
     border: 2px solid var(--border);
+    display: grid;
+    place-items: center;
+}
+
+.quick-icon svg {
+    width: 32px;
+    height: 32px;
+    stroke: currentColor;
+}
+
+/* Icon colors */
+.map-icon {
+    color: var(--blue);
+}
+
+.quotes-icon {
+    color: var(--green);
+}
+
+.profile-icon {
+    color: var(--amber);
 }
 
 .quick-title {
