@@ -1,16 +1,27 @@
 import { requireLogin, logout } from "./utils.js";
+import { MAPBOX_TOKEN } from "./config.js";
 
 requireLogin();
 
 const logoutBtn = document.getElementById("logoutBtn");
 logoutBtn?.addEventListener("click", logout);
 
-mapboxgl.accessToken = "YOUR_MAPBOX_ACCESS_TOKEN";
-
 const mapMsg = document.getElementById("mapMsg");
 const useMyLocationBtn = document.getElementById("useMyLocationBtn");
 const searchBtn = document.getElementById("searchBtn");
 const placeType = document.getElementById("placeType");
+
+// ✅ token comes from Render-generated config.js
+mapboxgl.accessToken = MAPBOX_TOKEN;
+
+// ✅ friendly message if token isn't present (ex: running without config.js)
+if (!mapboxgl.accessToken) {
+  if (mapMsg) {
+    mapMsg.textContent =
+      "Map is disabled: missing Mapbox token. (Set MAPBOX_TOKEN in Render Environment Variables.)";
+  }
+  throw new Error("Missing MAPBOX_TOKEN");
+}
 
 let userCenter = [-98, 38]; // default US center
 let markers = [];
