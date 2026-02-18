@@ -161,6 +161,14 @@ body {
     font-weight: 600;
 }
 
+.quote-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .tracker-line {
     margin-bottom: 14px;
 }

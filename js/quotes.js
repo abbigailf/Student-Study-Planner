@@ -1,6 +1,6 @@
 import { requireLogin, logout, loadJSON, saveJSON, userKey } from "./utils.js";
 
-const QUOTES_API = "https://type.fit/api/quotes";
+const QUOTES_API = "/data/quotes.json";
 
 export async function fetchQuotes() {
   try {

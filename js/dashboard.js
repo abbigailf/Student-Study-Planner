@@ -10,6 +10,7 @@ logoutBtn?.addEventListener("click", logout);
 const quoteText = document.getElementById("quoteText");
 const quoteAuthor = document.getElementById("quoteAuthor");
 const saveQuoteBtn = document.getElementById("saveQuoteBtn");
+const newQuoteBtn = document.getElementById("newQuoteBtn"); // ✅ NEW
 const quoteMsg = document.getElementById("quoteMsg");
 
 const todayHoursEl = document.getElementById("todayHours");
@@ -124,6 +125,9 @@ function saveFavorite() {
 }
 
 saveQuoteBtn?.addEventListener("click", saveFavorite);
+
+// ✅ NEW: click to cycle quotes without refreshing
+newQuoteBtn?.addEventListener("click", showRandomQuote);
 
 startSessionBtn?.addEventListener("click", () => {
   addSessionPrompt();
